@@ -8,5 +8,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/selenium-lib"/>
+	<classpathentry kind="lib" path="/home/admin1/Downloads/commons-io-2.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

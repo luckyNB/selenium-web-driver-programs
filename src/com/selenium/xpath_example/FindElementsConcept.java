@@ -1,14 +1,17 @@
-package com.selenium.ptc;
+package com.selenium.xpath_example;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Multiple_Frames_in_OnePage {
+public class FindElementsConcept {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		System.setProperty("webdriver.chrome.driver", "/home/admin1/Downloads/chromedriver_linux64/chromedriver");// Property
 
 		WebDriver driver = new ChromeDriver();// ChromeBrowser is selected dynamically for running the script
@@ -19,22 +22,18 @@ public class Multiple_Frames_in_OnePage {
 
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get("https://www.facebook.com/");
+		
+		List<WebElement> list=	 driver.findElements(By.tagName("a"));
 
-		driver.get("https://ui.freecrm.com/");
-
-		driver.findElement(By.name("email")).sendKeys("laxmanbhosale7374@gmail.com");
-		driver.findElement(By.name("password")).sendKeys("Laxman@2019");
-		driver.findElement(By.xpath("//input[@type='submit']")).click();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//a[contains(text(),'Contacts')]")).click();
-		
+	System.out.println("Number of links available::==>"+list.size());
+	
+	
+	for(WebElement element:list) {
+		System.out.println("\t"+element.getText());
 	}
+	
+	
+	}
+
 }
-
-
-
-
-
-

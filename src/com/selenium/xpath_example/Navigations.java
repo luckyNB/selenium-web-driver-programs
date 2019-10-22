@@ -1,13 +1,11 @@
-package com.selenium.ptc;
+package com.selenium.xpath_example;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Multiple_Frames_in_OnePage {
-
+public class Navigations {
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "/home/admin1/Downloads/chromedriver_linux64/chromedriver");// Property
 
@@ -19,22 +17,17 @@ public class Multiple_Frames_in_OnePage {
 
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get("https://www.ebay.com/");
 
-		driver.get("https://ui.freecrm.com/");
+		driver.navigate().to("https://www.facebook.com/");
 
-		driver.findElement(By.name("email")).sendKeys("laxmanbhosale7374@gmail.com");
-		driver.findElement(By.name("password")).sendKeys("Laxman@2019");
-		driver.findElement(By.xpath("//input[@type='submit']")).click();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//a[contains(text(),'Contacts')]")).click();
-		
+		driver.navigate().back();
+
+		Thread.sleep(2000);
+
+		driver.navigate().forward();
+		Thread.sleep(2000);
+		driver.navigate().back();
+
 	}
 }
-
-
-
-
-
-

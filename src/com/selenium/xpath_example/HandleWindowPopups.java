@@ -1,14 +1,15 @@
-package com.selenium.ptc;
+package com.selenium.xpath_example;
 
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Multiple_Frames_in_OnePage {
-
-	public static void main(String[] args) throws InterruptedException {
+public class HandleWindowPopups {
+	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "/home/admin1/Downloads/chromedriver_linux64/chromedriver");// Property
 
 		WebDriver driver = new ChromeDriver();// ChromeBrowser is selected dynamically for running the script
@@ -19,22 +20,14 @@ public class Multiple_Frames_in_OnePage {
 
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get("http://www.popuptest.com/");
 
-		driver.get("https://ui.freecrm.com/");
+		driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[1]/font[3]/b/a")).click();
 
-		driver.findElement(By.name("email")).sendKeys("laxmanbhosale7374@gmail.com");
-		driver.findElement(By.name("password")).sendKeys("Laxman@2019");
-		driver.findElement(By.xpath("//input[@type='submit']")).click();
+		Set<String> handler=driver.getWindowHandles();
 		
-		Thread.sleep(3000);
+		Iterator<String> it=handler.iterator();
 		
-		driver.findElement(By.xpath("//a[contains(text(),'Contacts')]")).click();
-		
+		System.out.println(it.next());
 	}
 }
-
-
-
-
-
-
