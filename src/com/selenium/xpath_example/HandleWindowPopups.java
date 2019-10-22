@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HandleWindowPopups {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "/home/admin1/Downloads/chromedriver_linux64/chromedriver");// Property
 
 		WebDriver driver = new ChromeDriver();// ChromeBrowser is selected dynamically for running the script
@@ -24,10 +24,19 @@ public class HandleWindowPopups {
 
 		driver.findElement(By.xpath("/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td[1]/font[3]/b/a")).click();
 
-		Set<String> handler=driver.getWindowHandles();
+		Set<String> handler = driver.getWindowHandles();
+
+		Iterator<String> it = handler.iterator();
+		String parentWindow = it.next();
+
+		System.out.println("Parent Window::" + parentWindow);
+
+		String childWidow = it.next();
+
+		System.out.println("Parent Window::" + childWidow);
+		driver.switchTo().window(childWidow);
+		Thread.sleep(2000);
 		
-		Iterator<String> it=handler.iterator();
-		
-		System.out.println(it.next());
+		driver.quit();
 	}
 }

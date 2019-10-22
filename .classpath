@@ -9,5 +9,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/selenium-lib"/>
 	<classpathentry kind="lib" path="/home/admin1/Downloads/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/Downloads/htmlunit-driver-2.36.0-jar-with-dependencies.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
