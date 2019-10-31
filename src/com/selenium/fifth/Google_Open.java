@@ -25,9 +25,9 @@ public class Google_Open {
 		String currentUrl = driver.getCurrentUrl();
 		System.out.println("the URL of the page is :" + currentUrl);
 		// Get the source code of the google page and print it on the console
-		String pageSource = driver.getPageSource();
-		System.out.println("the source code of the page is :" + pageSource);// Halt the program execution for 2 seconds
-		Thread.sleep(2000);
+//		String pageSource = driver.getPageSource();
+//		System.out.println("the source code of the page is :" + pageSource);// Halt the program execution for 2 seconds
+//		Thread.sleep(2000);
 		// Close the browser
 		driver.close();
 	}
