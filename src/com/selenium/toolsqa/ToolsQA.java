@@ -48,7 +48,7 @@ public class ToolsQA {
 		Thread.sleep(2000);
 		Select selenium_commands = new Select(driver.findElement(By.id("selenium_commands")));
 		selenium_commands.selectByVisibleText("Navigation Commands");
-
+		driver.close();
 	}
 
 }
