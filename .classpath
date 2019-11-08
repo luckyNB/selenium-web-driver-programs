@@ -10,5 +10,14 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/selenium-lib"/>
 	<classpathentry kind="lib" path="/home/admin1/Downloads/commons-io-2.4.jar"/>
 	<classpathentry kind="lib" path="/home/admin1/Downloads/htmlunit-driver-2.27-with-dependencies.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/apache-poi"/>
+	<classpathentry kind="lib" path="/home/admin1/Desktop/Seleniun Jars/poi-bin-4.1.1-20191023/poi-4.1.1/poi-scratchpad-4.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/Desktop/Seleniun Jars/poi-bin-4.1.1-20191023/poi-4.1.1/poi-ooxml-schemas-4.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/Desktop/Seleniun Jars/poi-bin-4.1.1-20191023/poi-4.1.1/poi-ooxml-4.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/Desktop/Seleniun Jars/poi-bin-4.1.1-20191023/poi-4.1.1/poi-excelant-4.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/Desktop/Seleniun Jars/poi-bin-4.1.1-20191023/poi-4.1.1/poi-examples-4.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/Desktop/Seleniun Jars/poi-bin-4.1.1-20191023/poi-4.1.1/poi-4.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/Desktop/Seleniun Jars/jxl-2.6.3.jar"/>
+	<classpathentry kind="lib" path="/home/admin1/Downloads/slf4j-api-1.7.25.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
